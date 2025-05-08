@@ -17,12 +17,12 @@ COPY test_5h.mp3 /app/
 COPY sample.wav /app/
 
 # Download the wheel package from GitHub Releases
-RUN curl -L -o pyannote_ai.whl \
+RUN curl -L -o pyannote_ai-0.7.0-cp310-abi3-manylinux_2_28_x86_64.whl \
   https://github.com/anamikarunpod/pyannote_ai_support_16227/releases/download/assets/pyannote_ai-0.7.0-cp310-abi3-manylinux_2_28_x86_64.whl
 
 # Install Python packages
 RUN pip3 install --no-cache-dir runpod
-RUN pip3 install --no-cache-dir /app/pyannote_ai.whl
+RUN pip3 install --no-cache-dir /app/pyannote_ai-0.7.0-cp310-abi3-manylinux_2_28_x86_64.whl
 
 # Run the ONNX runtime installation script
 RUN source install_onnx_runtime.sh
