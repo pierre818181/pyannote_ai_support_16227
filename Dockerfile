@@ -13,12 +13,17 @@ WORKDIR /app
 # Copy necessary files into the container
 COPY install_onnx_runtime.sh /app/
 COPY rp_handler.py /app/
-COPY test_5h.mp3 /app/
+#COPY test_5h.mp3 /app/
 COPY sample.wav /app/
 
 # Download the wheel package from GitHub Releases
 RUN curl -L -o pyannote_ai-0.7.0-cp310-abi3-manylinux_2_28_x86_64.whl \
   https://github.com/anamikarunpod/pyannote_ai_support_16227/releases/download/assets/pyannote_ai-0.7.0-cp310-abi3-manylinux_2_28_x86_64.whl
+
+# Download the big mp3 file
+RUN curl -L -o test_5h_new.mp3 \
+  https://github.com/anamikarunpod/pyannote_ai_support_16227/releases/download/mp3_asset/test_5h.mp3
+
 
 # Install Python packages
 RUN pip3 install --no-cache-dir runpod
