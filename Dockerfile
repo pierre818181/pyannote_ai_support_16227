@@ -21,7 +21,7 @@ RUN curl -L -o pyannote_ai-0.7.0-cp310-abi3-manylinux_2_28_x86_64.whl \
   https://github.com/anamikarunpod/pyannote_ai_support_16227/releases/download/assets/pyannote_ai-0.7.0-cp310-abi3-manylinux_2_28_x86_64.whl
 
 # Download the big mp3 file
-RUN curl -L -o test_5h_new.mp3 \
+RUN curl -L -o test_5h.mp3 \
   https://github.com/anamikarunpod/pyannote_ai_support_16227/releases/download/mp3_asset/test_5h.mp3
 
 
