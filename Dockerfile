@@ -13,7 +13,7 @@ WORKDIR /app
 # Copy necessary files into the container
 COPY install_onnx_runtime.sh /app/
 COPY rp_handler.py /app/
-#COPY test_5h.mp3 /app/
+COPY test_handler.py /app/
 COPY sample.wav /app/
 
 # Download the wheel package from GitHub Releases
