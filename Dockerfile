@@ -36,4 +36,4 @@ RUN source install_onnx_runtime.sh
 ENV LD_LIBRARY_PATH=/root/onnxruntime-linux-x64-gpu-1.19.2/lib
 
 # Run your handler script
-CMD ["python3", "rp_handler.py"]
+CMD python3 -u rp_handler.py > /workspace/logs.txt 2>&1
